@@ -1,0 +1,77 @@
+html,
+body {
+  height: 100%; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  padding: 0; }
+
+label {
+  display: block; }
+
+input {
+  padding: 10px;
+  width: 100%; }
+
+aside {
+  background-color: #333;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  width: 200px; }
+  aside.is-closed {
+    left: -200px; }
+
+main {
+  height: 100%;
+  padding: 20px;
+  width: 100%; }
+
+body {
+  color: #777;
+  font-size: 16px; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font: 500 1.5em / 1.5 "Helvetica Neue", Arial, sans-serif; }
+
+h1 {
+  color: #FFF; }
+
+p {
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  -ms-word-break: break-all;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  font: 300 16px / 1.7 "Helvetica Neue", Arial, sans-serif; }
+
+label {
+  color: white;
+  display: block;
+  font: 300 16px / 1.7 "Helvetica Neue", Arial, sans-serif;
+  margin-top: 10px; }
+
+.css-grid {
+  display: grid;
+  margin: 0 auto; }
+
+.css-toggle-pane-button {
+  background: #333;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.5em;
+  position: absolute;
+  padding: 20px;
+  right: -58px;
+  top: 0; }

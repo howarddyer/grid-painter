@@ -1,0 +1,17 @@
+aside {
+    background-color: $black;
+    height: 100%;
+    padding: $measure-small;
+    position: absolute;
+    width: $aside-width;
+
+    &.is-closed {
+        left: -$aside-width;
+    }
+}
+
+main {
+    height: 100%;
+    padding: $measure-small;
+    width: 100%;
+}

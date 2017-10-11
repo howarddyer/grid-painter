@@ -1,0 +1,10 @@
+.css-toggle-pane-button {
+    background: $black;
+    color: $white;
+    text-decoration: none;
+    font-size: $font-size-heading;
+    position: absolute;
+    padding: $measure-small;
+    right: -$toggle-width;
+    top: 0;
+}
