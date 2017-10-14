@@ -1,0 +1,15 @@
+/*
+==========
+Menu
+==========
+*/
+
+
+.c-menu {
+    background-color: $black;
+    position: absolute;
+}
+
+.c-menu.is-closed {
+    left: -$aside-width + $menu-button-width;
+}

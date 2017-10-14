@@ -1,0 +1,36 @@
+/*
+==========
+Fonts
+==========
+*/
+
+
+// Families
+
+$family-sans: "Helvetica Neue", Arial, sans-serif;
+
+
+// Sizes
+
+$size-base: 16px;
+$size-body: $size-base;
+$size-heading: 1.5em;
+
+
+// Line heights
+
+$line-height-body: 1.2;
+$line-height-heading: 1.2;
+
+
+// Weights
+
+$weight-bold: 500;
+$weight-regular: 300;
+
+
+// Custom font stacks
+
+$font-1-heading: $weight-bold $size-heading #{'/'} $line-height-heading $family-sans;
+$font-1-body-bold: $weight-bold $size-body #{'/'} $line-height-body $family-sans;
+$font-1-body: $weight-regular $size-body #{'/'} $line-height-body $family-sans;

@@ -1,0 +1,28 @@
+/*
+==========
+Structure
+==========
+*/
+
+
+// Base
+
+html,
+body {
+    height: $percent-100;
+}
+
+
+// Blocks
+
+aside {
+    height: $percent-100;
+    padding: $value-regular $value-xlarge $value-regular $value-regular;
+    width: $aside-width;
+}
+
+main {
+    height: $percent-100;
+    padding: $value-xlarge;
+    width: $main-width;
+}

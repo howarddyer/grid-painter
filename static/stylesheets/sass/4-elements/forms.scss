@@ -1,0 +1,18 @@
+/*
+==========
+Forms
+==========
+*/
+
+
+label {
+    display: block;
+    margin-top: $value-small;
+}
+
+input {
+    display: block;
+    margin-top: $value-small;
+    padding: $value-xsmall;
+    width: $percent-100;
+}

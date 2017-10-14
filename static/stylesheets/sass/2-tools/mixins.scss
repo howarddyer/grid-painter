@@ -1,3 +1,10 @@
+/*
+==========
+Mixins
+==========
+*/
+
+
 @mixin border-radius ($topleft, $topright, $bottomright, $bottomleft) {
   border-radius: $topleft $topright $bottomright $bottomleft;
   -moz-border-radius: $topleft $topright $bottomright $bottomleft;
@@ -5,10 +12,10 @@
 }
 
 @mixin word-wrap() {
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  -ms-hyphens: $value-auto;
+  -moz-hyphens: $value-auto;
+  -webkit-hyphens: $value-auto;
+  hyphens: $value-auto;
   -ms-word-break: break-all;
   overflow-wrap: break-word;
   word-break: break-word;

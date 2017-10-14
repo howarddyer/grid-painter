@@ -1,7 +1,33 @@
-html,
-body {
-  height: 100%; }
-
+/*
+==========
+Colours
+==========
+*/
+/*
+==========
+Fonts
+==========
+*/
+/*
+==========
+Measures
+==========
+*/
+/*
+==========
+Definitions
+==========
+*/
+/*
+==========
+Mixins
+==========
+*/
+/*
+==========
+Reset
+==========
+*/
 *,
 *::before,
 *::after {
@@ -10,27 +36,45 @@ body {
   margin: 0;
   padding: 0; }
 
+/*
+==========
+Forms
+==========
+*/
 label {
-  display: block; }
+  display: block;
+  margin-top: 10px; }
 
 input {
-  padding: 10px;
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
   width: 100%; }
 
+/*
+==========
+Structure
+==========
+*/
+html,
+body {
+  height: 100%; }
+
 aside {
-  background-color: #333;
   height: 100%;
-  padding: 20px;
-  position: absolute;
-  width: 200px; }
-  aside.is-closed {
-    left: -200px; }
+  padding: 20px 60px 20px 20px;
+  width: 250px; }
 
 main {
   height: 100%;
-  padding: 20px;
+  padding: 60px;
   width: 100%; }
 
+/*
+==========
+Typography
+==========
+*/
 body {
   color: #777;
   font-size: 16px; }
@@ -40,38 +84,62 @@ h2,
 h3,
 h4,
 h5 {
-  font: 500 1.5em / 1.5 "Helvetica Neue", Arial, sans-serif; }
+  font: 500 1.5em / 1.2 "Helvetica Neue", Arial, sans-serif; }
 
 h1 {
   color: #FFF; }
 
-p {
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  -ms-word-break: break-all;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  word-wrap: break-word;
-  font: 300 16px / 1.7 "Helvetica Neue", Arial, sans-serif; }
+p,
+label,
+input {
+  font: 300 16px / 1.2 "Helvetica Neue", Arial, sans-serif; }
 
 label {
-  color: white;
-  display: block;
-  font: 300 16px / 1.7 "Helvetica Neue", Arial, sans-serif;
-  margin-top: 10px; }
+  color: #FFF; }
 
-.css-grid {
+/*
+==========
+Grid
+==========
+*/
+.o-grid {
   display: grid;
-  margin: 0 auto; }
+  height: 100%;
+  margin: 0 auto;
+  width: 100%; }
 
-.css-toggle-pane-button {
-  background: #333;
+.o-grid-item:hover {
+  background: #BBB; }
+
+/*
+==========
+Menu
+==========
+*/
+.o-menu-button {
   color: #FFF;
-  text-decoration: none;
   font-size: 1.5em;
+  line-height: 1;
   position: absolute;
-  padding: 20px;
-  right: -58px;
-  top: 0; }
+  padding-right: 20px;
+  right: 0;
+  text-decoration: none;
+  top: 20px; }
+
+.is-closed .o-menu-heading {
+  position: absolute;
+  right: -35px;
+  top: 120px;
+  transform: rotate(270deg); }
+
+/*
+==========
+Menu
+==========
+*/
+.c-menu {
+  background-color: #333;
+  position: absolute; }
+
+.c-menu.is-closed {
+  left: -192px; }

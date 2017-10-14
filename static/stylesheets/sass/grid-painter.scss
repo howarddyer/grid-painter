@@ -1,14 +1,17 @@
-@import "1-settings/settings.colours";
-@import "1-settings/settings.fonts";
-@import "1-settings/settings.properties";
+@import "1-settings/colours";
+@import "1-settings/fonts";
+@import "1-settings/values";
+@import "1-settings/definitions";
 
-@import "2-tools/tools.mixins";
+@import "2-tools/mixins";
 
-@import "3-generic/generic.base";
+@import "3-generic/reset";
 
-@import "4-elements/elements.forms";
-@import "4-elements/elements.structure";
-@import "4-elements/elements.typography";
+@import "4-elements/forms";
+@import "4-elements/structure";
+@import "4-elements/typography";
 
-@import "6-components/components.grid";
-@import "6-components/components.links";
+@import "5-objects/grid";
+@import "5-objects/menu";
+
+@import "6-components/menu";

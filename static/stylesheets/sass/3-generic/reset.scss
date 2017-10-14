@@ -1,0 +1,15 @@
+/*
+==========
+Reset
+==========
+*/
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-shadow: $property-none;
+  margin: $value-zero;
+  padding: $value-zero;
+}

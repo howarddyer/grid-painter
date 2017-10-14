@@ -1,0 +1,25 @@
+/*
+==========
+Menu
+==========
+*/
+
+
+.o-menu-button {
+    color: $white;
+    font-size: $size-heading;
+    line-height: $menu-button-line-height;
+    position: absolute;
+    padding-right: $value-regular;
+    right: $value-zero;
+    text-decoration: $property-none;
+    top: $value-regular;
+}
+
+
+.is-closed .o-menu-heading {
+    position: absolute;
+    right: -35px;
+    top: 120px;
+    transform: rotate(270deg);
+}
