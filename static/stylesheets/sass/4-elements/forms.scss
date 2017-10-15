@@ -15,4 +15,8 @@ input {
     margin-top: $value-small;
     padding: $value-xsmall;
     width: $percent-100;
+
+    &:disabled {
+        background: $grey;
+    }
 }

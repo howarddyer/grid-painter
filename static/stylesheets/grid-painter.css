@@ -50,6 +50,8 @@ input {
   margin-top: 10px;
   padding: 5px;
   width: 100%; }
+  input:disabled {
+    background: #BBB; }
 
 /*
 ==========

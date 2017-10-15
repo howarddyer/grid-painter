@@ -62,16 +62,7 @@ gridPainter.create = (function () {
 
             var elementCell = document.createElement("div");
 
-            elementCell.className = "o-grid-item js-grid-item-" + i;
-
-            (function(item) {
-                elementCell.addEventListener("mouseover", function(e) {
-                    e.target.style.backgroundColor = "red";
-                });
-                elementCell.addEventListener("mouseout", function(e) {
-                    e.target.style.backgroundColor = null;
-                });
-            })(elementCell);
+            elementCell.className = "o-grid-item js-grid-item js-grid-item-" + i;
 
             elementGrid.append(elementCell);
 
