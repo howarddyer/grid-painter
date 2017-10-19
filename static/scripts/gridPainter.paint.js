@@ -13,27 +13,25 @@ gridPainter.paint = (function () {
     };
 
     var _bindEvents = function () {
-        elementGrid.onclick = _paintGridItem;
     };
 
     var _paintGridItem = function (event) {
 
         var element = event.target;
 
-        if (element.classList.contains("js-grid-item")) {
-            if (element.hasAttribute("data-painted")) {
-                element.style.backgroundColor = "";
-                element.removeAttribute("data-painted")
-            } else {
-                element.style.backgroundColor = valueColour;
-                element.setAttribute("data-painted",true)
-            }
+        if (element.hasAttribute("data-painted")) {
+            element.style.backgroundColor = "";
+            element.removeAttribute("data-painted")
+        } else {
+            element.style.backgroundColor = valueColour;
+            element.setAttribute("data-painted",true)
         }
 
     };
 
     return {
-        initialise: _initialise ()
+        initialise: _initialise (),
+        paintGridItem: _paintGridItem
     };
 
 })();

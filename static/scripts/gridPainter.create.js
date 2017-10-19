@@ -62,7 +62,11 @@ gridPainter.create = (function () {
 
             var elementCell = document.createElement("div");
 
-            elementCell.className = "o-grid-item js-grid-item js-grid-item-" + i;
+            elementCell.className = "o-grid-item js-grid-item-" + i;
+
+            (function(item) {
+                elementCell.addEventListener("click", gridPainter.paint.paintGridItem );
+            })(elementCell);
 
             elementGrid.append(elementCell);
 
