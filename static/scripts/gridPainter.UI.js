@@ -1,37 +1,21 @@
-var gridPainter = gridPainter || {};
+gridPainter.UI = ( function () {
 
-gridPainter.UI = (function () {
-
-    var elementMenu = document.querySelector(".js-menu"),
-        inputColumns = document.querySelector(".js-columns-textbox"),
-        inputRows = document.querySelector(".js-rows-textbox"),
-        buttonMenu = document.querySelector(".js-menu-button"),
-        valueMenuOpen = "&#10005;",
-        valueMenuClosed = "&#9776;";
-
-    var _initialise = function () {
-        _bindEvents();
-    };
-
-    var _bindEvents = function () {
-        buttonMenu.onclick = _toggleMenu;
-    };
+    var settings = gridPainter.settings;
 
     var _toggleMenu = function () {
-        var menu = elementMenu,
-            button = buttonMenu;
 
-        menu.classList.toggle("is-closed");
+        settings.element.menu.classList.toggle("is-closed");
 
-        if (menu.classList.contains("is-closed")) {
-            button.innerHTML = valueMenuClosed;
+        if (settings.element.menu.classList.contains("is-closed")) {
+            settings.input.menuButton.innerHTML = settings.value.iconMenuClosed;
         } else {
-            button.innerHTML = valueMenuOpen;
+            settings.input.menuButton.innerHTML = settings.value.iconMenuOpen;
         }
+
     };
 
     return {
-        initialise: _initialise ()
+        toggleMenu: _toggleMenu
     };
 
-})();
+} ) ();

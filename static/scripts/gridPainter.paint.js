@@ -1,37 +1,24 @@
-var gridPainter = gridPainter || {};
-
 gridPainter.paint = (function () {
 
-    var elementGrid = document.querySelector(".js-grid"),
-        inputColour = document.querySelector(".js-colour-textbox"),
-        inputBackground = document.querySelector(".js-background-textbox"),
-        valueColour = inputColour.value;
-
-
-    var _initialise = function () {
-        _bindEvents();
-    };
-
-    var _bindEvents = function () {
-    };
+    var settings = gridPainter.settings;
 
     var _paintGridItem = function (event) {
 
-        var element = event.target;
+        var elementClasses = event.target.className.split(" "),
+            elementCssSelector = "." + elementClasses[0] + "." + elementClasses[1],
+            painted = elementCssSelector in settings.thisGrid.css ? true : false;
 
-        if (element.hasAttribute("data-painted")) {
-            element.style.backgroundColor = "";
-            element.removeAttribute("data-painted")
+        if (painted) {
+            delete settings.thisGrid.css[elementCssSelector];
+            gridPainter.processCss.addCssToUI();
         } else {
-            element.style.backgroundColor = valueColour;
-            element.setAttribute("data-painted",true)
+            gridPainter.processCss.addGridItemCss(elementCssSelector);
         }
 
     };
 
     return {
-        initialise: _initialise (),
         paintGridItem: _paintGridItem
     };
 
-})();
+} ) ();
