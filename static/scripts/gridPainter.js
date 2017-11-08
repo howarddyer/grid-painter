@@ -7,7 +7,7 @@ var gridPainter = ( function () {
     };
 
     var _input = {
-        menuButton: document.querySelector(".js-menu-button"),
+        menuButton: document.querySelector(".js-menu__button"),
         columns: document.querySelector(".js-columns-textbox"),
         rows: document.querySelector(".js-rows-textbox"),
         background: document.querySelector(".js-background-textbox"),
@@ -16,7 +16,7 @@ var gridPainter = ( function () {
 
     var _value = {
         cssSelectorBaseGrid: "c-grid",
-        cssSelectorBaseGridItem: "grid-item",
+        cssSelectorBaseGridItem: "grid__item",
         sizeCell: "1fr",
         pagePadding: "124px",
         iconMenuOpen: "&#10005;",

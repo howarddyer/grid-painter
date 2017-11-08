@@ -5,10 +5,11 @@ gridPainter.paint = (function () {
     var _paintGridItem = function (event) {
 
         var elementId = event.target.id,
-            painted = "#" + elementId in settings.thisGrid.css ? true : false;
+            elementSelector = "#" + elementId,
+            painted = elementSelector in settings.thisGrid.css ? true : false;
 
         if (painted) {
-            delete settings.thisGrid.css["#" + elementId];
+            delete settings.thisGrid.css[elementSelector];
             gridPainter.processCss.addCssToUI();
         } else {
             gridPainter.processCss.addGridItemCss(elementId);
