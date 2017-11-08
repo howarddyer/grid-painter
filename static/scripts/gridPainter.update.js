@@ -15,7 +15,7 @@ gridPainter.update = ( function () {
             gridPainter.processCss.updateGridItemCss(columnChange);
         }
 
-        gridPainter.processCss.addGridCss(settings.value.gridCssSelector);
+        gridPainter.processCss.addGridCss(settings.value.cssSelectorBaseGrid);
         gridPainter.add.addGridItems();
 
     };

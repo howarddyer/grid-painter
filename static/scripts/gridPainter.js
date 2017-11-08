@@ -15,8 +15,8 @@ var gridPainter = ( function () {
     };
 
     var _value = {
-        gridCssSelector: ".o-grid",
-        gridItemCssSelector: "o-grid-item",
+        cssSelectorBaseGrid: "o-grid",
+        cssSelectorBaseGridItem: "o-grid-item",
         sizeCell: "1fr",
         pagePadding: "124px",
         iconMenuOpen: "&#10005;",

@@ -4,6 +4,8 @@ gridPainter.processCss = ( function () {
 
     var _addGridCss = function (cssSelector) {
 
+        cssSelector = "." + cssSelector;
+
         var valueMax = Math.max(settings.thisGrid.rows, settings.thisGrid.columns);
 
         settings.thisGrid.css[cssSelector] = [
@@ -28,12 +30,12 @@ gridPainter.processCss = ( function () {
 
     var _updateGridItemCss = function (change) {
 
-        var itemClassPre = "." + settings.value.gridItemCssSelector + "." + settings.value.gridItemCssSelector + "-",
-            itemClassPreTemp = "temp." + settings.value.gridItemCssSelector + "." + settings.value.gridItemCssSelector + "-",
+        var itemClassPre = "." + settings.value.cssSelectorBaseGridItem + "." + settings.value.cssSelectorBaseGridItem + "-",
+            itemClassPreTemp = "temp." + settings.value.cssSelectorBaseGridItem + "." + settings.value.cssSelectorBaseGridItem + "-",
             previousColumn = settings.thisGrid.columns - change;
 
         for (var key in settings.thisGrid.css) {
-            if (key.indexOf(settings.value.gridItemCssSelector) != -1) {
+            if (key.indexOf(settings.value.cssSelectorBaseGridItem) != -1) {
 
                 var itemGridIndex = parseInt(key.substring(itemClassPre.length,key.length)),
                     itemRowIndex = Math.ceil(itemGridIndex / previousColumn),
@@ -54,7 +56,7 @@ gridPainter.processCss = ( function () {
         }
 
         for (var key in settings.thisGrid.css) {
-            if (key.indexOf(settings.value.gridItemCssSelector) != -1) {
+            if (key.indexOf(settings.value.cssSelectorBaseGridItem) != -1) {
 
                 var newKey = key.replace("temp", ""),
                     content = settings.thisGrid.css[key]

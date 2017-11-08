@@ -11,7 +11,7 @@ gridPainter.add = ( function () {
         settings.thisGrid.enabled = true;
 
 
-        gridPainter.processCss.addGridCss(settings.value.gridCssSelector);
+        gridPainter.processCss.addGridCss(settings.value.cssSelectorBaseGrid);
         _addGridItems();
 
     };
@@ -24,7 +24,7 @@ gridPainter.add = ( function () {
 
             var elementCell = document.createElement("div");
 
-            elementCell.className = settings.value.gridItemCssSelector + " " + settings.value.gridItemCssSelector + "-" + i;
+            elementCell.className = settings.value.cssSelectorBaseGridItem + " " + settings.value.cssSelectorBaseGridItem + "-" + i;
 
             (function(item) {
                 elementCell.addEventListener("click", gridPainter.paint.paintGridItem );
