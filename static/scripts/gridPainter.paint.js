@@ -4,15 +4,14 @@ gridPainter.paint = (function () {
 
     var _paintGridItem = function (event) {
 
-        var elementClasses = event.target.className.split(" "),
-            elementCssSelector = "." + elementClasses[0] + "." + elementClasses[1],
-            painted = elementCssSelector in settings.thisGrid.css ? true : false;
+        var elementId = event.target.id,
+            painted = "#" + elementId in settings.thisGrid.css ? true : false;
 
         if (painted) {
-            delete settings.thisGrid.css[elementCssSelector];
+            delete settings.thisGrid.css["#" + elementId];
             gridPainter.processCss.addCssToUI();
         } else {
-            gridPainter.processCss.addGridItemCss(elementCssSelector);
+            gridPainter.processCss.addGridItemCss(elementId);
         }
 
     };

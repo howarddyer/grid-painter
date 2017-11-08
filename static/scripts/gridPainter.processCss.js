@@ -22,6 +22,8 @@ gridPainter.processCss = ( function () {
 
     var _addGridItemCss = function (cssSelector) {
 
+        cssSelector = "#" + cssSelector;
+
         settings.thisGrid.css[cssSelector] = "background: " + settings.value.colour;
 
         _addCssToUI()
@@ -30,14 +32,14 @@ gridPainter.processCss = ( function () {
 
     var _updateGridItemCss = function (change) {
 
-        var itemClassPre = "." + settings.value.cssSelectorBaseGridItem + "." + settings.value.cssSelectorBaseGridItem + "-",
-            itemClassPreTemp = "temp." + settings.value.cssSelectorBaseGridItem + "." + settings.value.cssSelectorBaseGridItem + "-",
+        var itemIdPre = "#" + settings.value.cssSelectorBaseGridItem + "-",
+            itemIdPreTemp = "temp#" + settings.value.cssSelectorBaseGridItem + "-",
             previousColumn = settings.thisGrid.columns - change;
 
         for (var key in settings.thisGrid.css) {
             if (key.indexOf(settings.value.cssSelectorBaseGridItem) != -1) {
 
-                var itemGridIndex = parseInt(key.substring(itemClassPre.length,key.length)),
+                var itemGridIndex = parseInt(key.substring(itemIdPre.length,key.length)),
                     itemRowIndex = Math.ceil(itemGridIndex / previousColumn),
                     itemColumnIndex = itemGridIndex - (previousColumn * (itemRowIndex - 1));
 
@@ -45,7 +47,7 @@ gridPainter.processCss = ( function () {
                     delete settings.thisGrid.css[key];
                 } else if (itemGridIndex > previousColumn) {
                     var newItemGridIndex = itemGridIndex + (change * (itemRowIndex - 1)),
-                        newKey = itemClassPreTemp + newItemGridIndex,
+                        newKey = itemIdPreTemp + newItemGridIndex,
                         content = settings.thisGrid.css[key]
 
                     delete settings.thisGrid.css[key];
