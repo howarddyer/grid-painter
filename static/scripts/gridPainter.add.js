@@ -25,7 +25,7 @@ gridPainter.add = ( function () {
             var elementCell = document.createElement("div");
 
             elementCell.id = settings.value.cssSelectorBaseGridItem + "-" + i;
-            elementCell.className = "o-" + settings.value.cssSelectorBaseGridItem;
+            elementCell.className = "c-" + settings.value.cssSelectorBaseGridItem;
 
             (function(item) {
                 elementCell.addEventListener("click", gridPainter.paint.paintGridItem );

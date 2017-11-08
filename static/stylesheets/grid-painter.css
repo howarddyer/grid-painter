@@ -104,35 +104,13 @@ label {
 Grid
 ==========
 */
-.o-grid {
+.c-grid {
   display: grid;
   height: 100%;
   margin: 0 auto;
   width: 100%; }
-
-.o-grid-item:hover {
-  background: #BBB; }
-
-/*
-==========
-Menu
-==========
-*/
-.o-menu-button {
-  color: #FFF;
-  font-size: 1.5em;
-  line-height: 1;
-  position: absolute;
-  padding-right: 20px;
-  right: 0;
-  text-decoration: none;
-  top: 20px; }
-
-.is-closed .o-menu-heading {
-  position: absolute;
-  right: -35px;
-  top: 120px;
-  transform: rotate(270deg); }
+  .c-grid__item:hover {
+    background: #BBB; }
 
 /*
 ==========
@@ -142,6 +120,19 @@ Menu
 .c-menu {
   background-color: #333;
   position: absolute; }
-
-.c-menu.is-closed {
-  left: -192px; }
+  .c-menu--is-closed {
+    left: -192px; }
+  .c-menu--is-closed .c-menu__heading {
+    position: absolute;
+    right: -35px;
+    top: 120px;
+    transform: rotate(270deg); }
+  .c-menu__button {
+    color: #FFF;
+    font-size: 1.5em;
+    line-height: 1;
+    position: absolute;
+    padding-right: 20px;
+    right: 0;
+    text-decoration: none;
+    top: 20px; }

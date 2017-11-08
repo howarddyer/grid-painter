@@ -5,13 +5,18 @@ Grid
 */
 
 
-.o-grid {
+.c-grid {
     display: grid;
     height: 100%;
     margin: $value-zero $property-auto;
     width: 100%;
-}
 
-.o-grid-item:hover {
-    background: $grey;
+    &__item {
+
+        &:hover {
+            background: $grey;
+        }
+
+    }
+
 }

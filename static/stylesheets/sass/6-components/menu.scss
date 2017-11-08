@@ -8,8 +8,27 @@ Menu
 .c-menu {
     background-color: $black;
     position: absolute;
-}
 
-.c-menu.is-closed {
-    left: -$aside-width + $menu-button-width;
+    &--is-closed {
+        left: -$aside-width + $menu-button-width;
+    }
+
+    &--is-closed &__heading {
+        position: absolute;
+        right: -35px;
+        top: 120px;
+        transform: rotate(270deg);
+    }
+
+    &__button {
+        color: $white;
+        font-size: $size-heading;
+        line-height: $menu-button-line-height;
+        position: absolute;
+        padding-right: $value-regular;
+        right: $value-zero;
+        text-decoration: $property-none;
+        top: $value-regular;
+    }
+
 }
