@@ -4,9 +4,9 @@ gridPainter.UI = ( function () {
 
     var _toggleMenu = function () {
 
-        settings.element.menu.classList.toggle("is-closed");
+        settings.element.menu.classList.toggle("c-menu--is-closed");
 
-        if (settings.element.menu.classList.contains("is-closed")) {
+        if (settings.element.menu.classList.contains("c-menu--is-closed")) {
             settings.input.menuButton.innerHTML = settings.value.iconMenuClosed;
         } else {
             settings.input.menuButton.innerHTML = settings.value.iconMenuOpen;
